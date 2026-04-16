@@ -1,6 +1,14 @@
 body {
     background-color: lightblue;
+    margin: 0;
 }
+
 nav {
      background-color: red;
+}
+
+.nav-button {  
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;       
 }
