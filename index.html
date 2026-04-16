@@ -2,18 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Web - Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Contacto - Camisetas Retro</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-
-    <nav>
-        <a class="nav-button" href="index.html">Inicio</a>
-        <a class="nav-button" href="views/productos.html">Productos</a>
-        <a class="nav-button" href="views/contacto.html">Contacto</a>
-        <a class="nav-button" href="views/presupuesto.html">Presupuesto</a>
+<body> <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="presupuesto.html">Presupuesto</a>
     </nav>
 
-    <h1>Mi web</h1>
+    <header>
+        <h1>Página de contacto</h1>
+    </header>
 
-</body>
+    <main>
+        <h2>¿Dónde estamos?</h2>
+        
+        <div class="contacto-flex">
+            <section class="datos-contacto">
+                <h3>Camisetas Retro S.L.</h3>
+                <p><strong>Dirección:</strong> Paseo de la Castellana 144, Madrid</p>
+                <p><strong>Teléfono:</strong> 912 345 678</p>
+                <p><strong>Email:</strong> info@camisetasretro.com</p>
+            </section>
+
+            <section class="mapa">
+                <h3>Nuestra Tienda</h3>
+                <img src="../img/mapatienda.jpg" alt="Mapa de la tienda">
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Camisetas Retro S.L.</strong></p>
+            <div class="redes">
+                <a href="https://facebook.com">Facebook</a> | 
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+            <p><a href="#">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+</body> </html> ```
+
+### 3. El CSS (`styles.css`)
+Asegúrate de que en tu archivo de estilos tienes este bloque para que el mapa se porte bien:
+
+```css
