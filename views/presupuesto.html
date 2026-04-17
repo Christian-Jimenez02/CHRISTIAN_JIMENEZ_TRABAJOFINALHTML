@@ -2,45 +2,91 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Presupuesto - Mi Primera Web</title>
-    </head>
-    <footer>
-    <hr> <div class="footer-content">
-        <p><strong>Camisetas Retro S.L.</strong></p>
-        <p>Calle del Fútbol Vintage, 10, Madrid</p>
-        
-        <div class="redes">
-            <a href="https://facebook.com">Facebook</a> | 
-            <a href="https://instagram.com">Instagram</a> | 
-            <a href="https://twitter.com">Twitter</a>
-        </div>
-        
-        <p><a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
-    </div>
-</footer>
+    <title>Presupuesto - Camisetas Retro</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
 <body>
+    <nav>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="menu-links">
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="presupuesto.html" class="active">Presupuesto</a>
+        </div>
+    </nav>
 
-<nav>
-    <a href="../index.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="presupuesto.html">Presupuesto</a>
-</nav>
+  <main class="container">
+    <h2 class="titulo-deportivo">Personaliza tu Leyenda</h2>
+    
+    <div class="form-container">
+        <form action="#" method="post">
+            
+            <div class="form-group">
+                <label>Nombre Completo *</label>
+                <input type="text" name="nombre" required placeholder="Tu nombre...">
+            </div>
 
-    <header>
-        <h1>Página de presupuesto</h1>
-    </header>
+            <div class="form-group">
+                <label>Email de Contacto *</label>
+                <input type="email" name="email" required placeholder="tu@email.com">
+            </div>
 
-    <main>
-        <p>Aquí irá la cuadrícula de imágenes pronto.</p>
-    </main>
+            <div class="form-group">
+                <label>Teléfono *</label>
+                <input type="tel" name="telefono" required placeholder="600 000 000">
+            </div>
 
-    <footer>
-        <p>Aviso Legal - Redes Sociales</p>
-    </footer>
+            <hr style="margin-bottom: 20px; opacity: 0.2;">
 
+            <div class="form-group">
+                <label>Modelo Seleccionado</label>
+                <select name="modelo">
+                    <option>Elige tu camiseta...</option>
+                    <option>Alemania 1990 - Local</option>
+                    <option>Brasil 1998 - Ronaldo #9</option>
+                    <option>Nápoles 1987 - Maradona #10</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Talla de Juego</label>
+                <select name="talla">
+                    <option>S - Estándar</option>
+                    <option>M - Estándar</option>
+                    <option>L - Estándar</option>
+                    <option>XL - Estándar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Personalización y más información (Nombre y Número) *</label>
+                <textarea name="info" rows="3" required placeholder="Ej: MARADONA 10..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">Acepto la Política de Privacidad *</label>
+            </div>
+
+            <button type="submit" class="btn-enviar">CONSEGUIR MI EQUIPACIÓN</button>
+        </form>
+    </div>
+    
+</main>
+
+<footer>
+    <div class="social-links">
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://twitter.com">Twitter</a>
+    </div>
+    <p>Dirección: Calle de Fuencarral, 45, 28004 Madrid</p>
+    <p><a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
+    <p>&copy; 2026 Camisetas Retro. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
-<label for="mensaje">¿Buscas una edición especial?</label>
-<textarea id="mensaje" name="mensaje" rows="4" required 
-    placeholder="Dinos qué selección o club buscas, el año y si quieres que lleve algún nombre/número a la espalda..."></textarea>
+

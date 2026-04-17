@@ -1,88 +1,198 @@
-/* --- ESTILOS GENERALES --- */
-body {
-    background-color: #f4f4f4; /* Gris claro para que resalte el blanco */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    <link rel="stylesheet" href="../css/styles.css">
+/* --- 1. BASE Y VARIABLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+
+/* --- 2. NAVEGACIÓN (Pro) --- */
+nav { 
+    background: #1a1a1a; 
+    padding: 20px 0; 
+    text-align: center; 
+    border-bottom: 4px solid #ffcc00; 
+}
+.logo { height: 65px; margin-bottom: 15px; }
+.menu-links a { 
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    font-size: 13px;
+    transition: color 0.3s;
+}
+.menu-links a:hover, .menu-links a.active { color: #ffcc00; }
+
+/* --- 3. CONTENEDOR Y TÍTULOS --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+h2 { 
+    text-align: center; 
+    margin: 40px 0; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 24px;
 }
 
-/* --- MENÚ DE NAVEGACIÓN --- */
-nav {
-    background-color: #333;
-    padding: 15px;
-    text-align: center;
+/* --- 4. SECCIÓN VENTAJAS (Inicio) --- */
+.ventajas { display: flex; gap: 20px; margin-bottom: 60px; }
+.ventaja-card { 
+    flex: 1; 
+    background: white; 
+    padding: 30px 20px; 
+    border-radius: 12px; 
+    text-align: center; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+.ventaja-card h3 { font-size: 16px; margin-bottom: 10px; color: #1a1a1a; }
+.ventaja-card p { font-size: 14px; color: #777; }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+/* --- 5. GRID DE PRODUCTOS --- */
+.grid-catalogo { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
 }
-
-nav a:hover {
-    color: #ffcc00;
+.producto-card { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; /* Por si lo haces enlace */
+    color: inherit;
 }
-
-/* --- GALERÍA DE PRODUCTOS --- */
-.contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.producto-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
 }
-
-.producto {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-}
-
-.producto img {
-    width: 100%;
-    height: 300px; /* Ajusta la altura a tu gusto */
-    object-fit: contain;
-    background-color: #fff;
-}
-
-/* --- SECCIÓN DE CONTACTO --- */
-.contacto-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-}
-
-.datos-contacto, .mapa {
-    flex: 1;
-    min-width: 300px;
-}
-
-.mapa img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+.producto-card img { 
+    width: 100%; 
+    height: 300px; 
+    object-fit: contain; 
+    background: #fafafa;
     border-radius: 8px;
-}
-/* Esto va en styles.css */
-.contacto-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
+    margin-bottom: 15px;
 }
 
-.mapa img {
-    max-width: 100%;
-    height: 350px; /* Altura controlada */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}          
+/* --- 6. BOTONES Y PIE --- */
+.btn-principal {
+    display: inline-block;
+    background: #1a1a1a;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+.btn-principal:hover { background: #ffcc00; color: #1a1a1a; transform: scale(1.05); }
+
+footer { text-align: center; padding: 40px; color: #999; font-size: 12px; }
+
+/* --- 7. FORMULARIOS (Contacto y Presupuesto) --- */
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ffcc00; /* Color de tu marca */
+}
+
+.btn-enviar {
+    width: 100%;
+    background: #1a1a1a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #ffcc00;
+    color: #1a1a1a;
+}
+.btn-enviar {
+    width: 100%;
+    background: #ffcc00; /* Amarillo vibrante */
+    color: #1a1a1a;      /* Texto negro para legibilidad máxima */
+    padding: 18px;
+    border: none;
+    border-radius: 4px;  /* Menos redondeado para un look más técnico */
+    font-family: 'Arial Black', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 0px #cca300; /* Efecto de profundidad sólido */
+}
+
+.btn-enviar:hover {
+    background: #1a1a1a;
+    color: #ffcc00;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0px #000;
+}
+
+/* Contenedor específico para el checkbox y su texto */
+.checkbox-group {
+    display: flex;       /* Alinea los elementos en línea */
+    align-items: center; /* Centra verticalmente el cuadro con el texto */
+    gap: 10px;           /* Espacio entre el cuadro y el texto */
+    margin: 25px 0;      /* Espacio arriba y abajo */
+}
+
+/* Forzamos a que el checkbox NO ocupe el 100% del ancho */
+.checkbox-group input[type="checkbox"] {
+    width: 18px;         /* Tamaño del cuadro */
+    height: 18px;
+    cursor: pointer;
+    margin: 0;           /* Quitamos márgenes extra */
+}
+
+/* Estilo para el texto que acompaña al checkbox */
+.checkbox-group label {
+    margin: 0;           /* Quitamos el margen inferior de los labels normales */
+    font-size: 14px;
+    font-weight: normal; /* Menos pesado que los títulos de arriba */
+    color: #555;
+    cursor: pointer;
+}

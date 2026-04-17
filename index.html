@@ -2,52 +2,75 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto - Camisetas Retro</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisetas Retro - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body> <nav>
-        <a href="../index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="presupuesto.html">Presupuesto</a>
+<body>
+
+    <nav>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <div class="menu-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="views/productos.html">Productos</a>
+            <a href="views/contacto.html">Contacto</a>
+            <a href="views/presupuesto.html">Presupuesto</a>
+        </div>
     </nav>
 
-    <header>
-        <h1>Página de contacto</h1>
-    </header>
+    <main class="container">
+        <section class="ventajas">
+            <div class="ventaja-card">
+                <h3>🏆 Calidad Premium</h3>
+                <p>Réplicas exactas con escudos bordados de alta densidad.</p>
+            </div>
+            <div class="ventaja-card">
+                <h3>🚚 Envío Global</h3>
+                <p>Logística internacional con seguimiento en tiempo real.</p>
+            </div>
+            <div class="ventaja-card">
+                <h3>⭐ Atención Única</h3>
+                <p>Soporte personalizado para coleccionistas exigentes.</p>
+            </div>
+        </section>
 
-    <main>
-        <h2>¿Dónde estamos?</h2>
-        
-        <div class="contacto-flex">
-            <section class="datos-contacto">
-                <h3>Camisetas Retro S.L.</h3>
-                <p><strong>Dirección:</strong> Paseo de la Castellana 144, Madrid</p>
-                <p><strong>Teléfono:</strong> 912 345 678</p>
-                <p><strong>Email:</strong> info@camisetasretro.com</p>
-            </section>
+        <h2>Novedades Destacadas</h2>
 
-            <section class="mapa">
-                <h3>Nuestra Tienda</h3>
-                <img src="../img/mapatienda.jpg" alt="Mapa de la tienda">
-            </section>
+        <div class="grid-catalogo">
+            <article class="producto-card">
+                <img src="img/alemania_adidas.jpg" alt="Alemania">
+                <h3>Alemania 1990</h3>
+                <p class="precio">65€</p>
+            </article>
+
+            <article class="producto-card">
+                <img src="img/napoles_buitoni.jpg" alt="Napoles">
+                <h3>Nápoles 1987 (Maradona)</h3>
+                <p class="precio">60€</p>
+            </article>
+
+            <article class="producto-card">
+                <img src="img/brasil_nike.jpg" alt="Brasil">
+                <h3>Brasil 1998 (Ronaldo)</h3>
+                <p class="precio">70€</p>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="views/productos.html" class="btn-principal">Explorar Catálogo Completo</a>
         </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p><strong>Camisetas Retro S.L.</strong></p>
-            <div class="redes">
-                <a href="https://facebook.com">Facebook</a> | 
-                <a href="https://instagram.com">Instagram</a>
-            </div>
-            <p><a href="#">Aviso Legal</a></p>
-        </div>
-    </footer>
+    <div class="social-links">
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://twitter.com">Twitter</a>
+    </div>
+    <p>Dirección: Calle de Fuencarral, 45, 28004 Madrid</p>
+    <p><a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
+    <p>&copy; 2026 Camisetas Retro. Todos los derechos reservados.</p>
+</footer>
 
-</body> </html> ```
-
-### 3. El CSS (`styles.css`)
-Asegúrate de que en tu archivo de estilos tienes este bloque para que el mapa se porte bien:
-
-```css
+</body>
+</html>
